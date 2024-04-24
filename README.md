@@ -1,12 +1,12 @@
 # hideseenjobs
 a chrome extension to hide previously seen jobs on jobboards.
-**What it does**
+<p>**What it does**
 The extension has two buttons. The first button writes the unique identifications of all the job postings visible on the page into a table. 
 The second button hides all jobs that are in the table. 
-If the site has multiple pages, the button will work only with the current page.
+If the site has multiple pages, the button will work only with the current page.</p>
 
-**Supported websites**
-World Bank: worldbankgroup.csod.com
+<p>**Supported websites**</p>
+<p>World Bank: worldbankgroup.csod.com
 UNDP: jobs.undp.org
 Helvetas: helvetas.org
 FAO: jobs.fao.org
@@ -17,6 +17,6 @@ ICRC: careers.icrc.org
 OSCE: vacancies.osce.org
 UNHCR: unhcr.wd3.myworkdayjobs.com
 ILO: jobs.ilo.org
-UNJOBS: unjobs.org
+UNJOBS: unjobs.org</p>
 
 **How  to launch**
