@@ -1,6 +1,6 @@
 # hideseenjobs
 a chrome extension to hide previously seen jobs on jobboards.
-<p><b>What it does</b>p></p>b>
+<p><b>What it does</b></p>
 <p>The extension has two buttons. The first button writes the unique identifications of all the job postings visible on the page into a table. <br>
 The second button hides all jobs that are in the table. <br>
 If the site has multiple pages, the button will work only with the current page.</p>
@@ -22,4 +22,6 @@ UNJOBS: unjobs.org</p><br>
 <p><b>How  to launch</b></p>
 <p>1) Download the zip file frog Github<br>
 2) Unpack the file<br>
-3)</p>
+3) Open Chrome Extensions chrome://extensions <br>
+4) Enable the Developer mode<br>
+5) Press the "Load Unpacked Extension"<br></p>
