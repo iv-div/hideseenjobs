@@ -20,12 +20,14 @@ ILO: jobs.ilo.org<br>
 UNJOBS: unjobs.org</p><br>
 
 <p><b>How  to launch</b></p>
-<p>1) Download the zip file frog Github<br>
-2) Unpack the file<br>
-3) Open Chrome Extensions chrome://extensions <br>
+<p>1) Download the <a href="https://github.com/iv-div/hideseenjobs/archive/master.zip">zip file from Github</a><br>
+2) Unpack the file. It should unzip into a folder named <code>hideseenjobs-main</code><br>
+3) Open Chrome Extensions <code>chrome://extensions</code><br>
 4) Enable the Developer mode<br>
 5) Press the "Load Unpacked Extension"<br>
-6) Select the folder with the extension<br></p>
+6) Select the folder <code>hideseenjobs-main</code> with the extension<br>
+7) Alternatively, drag the folder <code>hideseenjobs-main</code> on the extension page. <br>
+8) Don't delete the folder afterwards, <br></p>
 
 <p><b>New site requests and troubleshooting</b></p>
 Contact me
