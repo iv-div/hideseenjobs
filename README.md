@@ -3,7 +3,8 @@ a chrome extension to hide previously seen jobs on jobboards.
 <p><b>What it does</b></p>
 <p>The extension has two buttons. The first button writes the unique identifications of all the job postings visible on the page into a table. <br>
 The second button hides all jobs that are in the table. <br>
-If the site has multiple pages, the button will work only with the current page.</p>
+If the site has multiple pages, the button will work only with the current page. <br>
+If you want to unhide the jobs, simply refresh the page.</p>
 
 <p><b>Supported websites</b></p>
 <p><b>UN system</b></p>
