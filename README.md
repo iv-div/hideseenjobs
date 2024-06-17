@@ -40,6 +40,7 @@ If you want to unhide the jobs, simply refresh the page.</p>
 6) Select the folder <code>hideseenjobs-main</code> with the extension<br>
 7) Alternatively, drag the folder <code>hideseenjobs-main</code> on the extension page. <br>
 8) Don't delete the folder afterwards, <br></p>
-
-<p><b>New site requests and troubleshooting</b></p>
-Contact me
+<p><b>New site requests and troubleshooting</b>
+Contact me</p>
+<p><b>Are you hiring?</b>
+Have a look at my <a href="https://drive.google.com/file/d/1GDubREA7TtXvgmXGnKG8G2dwkXiRyXDo/view?usp=sharing">CV</a></p>
