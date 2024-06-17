@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Ivan Divilkovskiy's Awesome (Very Best) Seen Job Hider",
+    "version": "1.6",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon48.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.worldbank.org/*", "*://jobs.undp.org/*"],
+            "js": ["content.js"]
+        }
+    ],
+
+    "host_permissions": [
+        "*://*.worldbank.org/*",
+        "*://jobs.undp.org/*"
+    ]
+}
