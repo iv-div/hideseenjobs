@@ -24,4 +24,8 @@ UNJOBS: unjobs.org</p><br>
 2) Unpack the file<br>
 3) Open Chrome Extensions chrome://extensions <br>
 4) Enable the Developer mode<br>
-5) Press the "Load Unpacked Extension"<br></p>
+5) Press the "Load Unpacked Extension"<br>
+6) Select the folder with the extension<br></p>
+
+<p><b>New site requests and troubleshooting</b></p>
+Contact me
