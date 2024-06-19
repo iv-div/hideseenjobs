@@ -18,6 +18,15 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.style.display = 'none'
         },
+        "tetratech.referrals.selectminds.com": {
+            storageKey: 'tetraTechJobIds',
+            jobLinkSelector: 'a.job_link.font_bold', // Selector for the job link
+            jobIdExtractor: link => {
+                const urlParts = link.href.split('-');
+                return urlParts[urlParts.length - 1]; // Extract the numeric job ID from the last part of the URL
+            },
+            hideMethod: (element) => element.closest('.job_list_row').style.display = 'none' // Hide the entire job list row
+        },
         "egpy.fa.us2.oraclecloud.com": {
             storageKey: 'abtJobIds',
             jobLinkSelector: 'li[data-qa="searchResultItem"] a.job-list-item__link', // Selector for the job link
