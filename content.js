@@ -167,6 +167,15 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.closest('tr').style.display = 'none'
         },
+            "netimpact.org": {
+                storageKey: 'netImpactJobIds',
+                jobLinkSelector: 'h3 a[href^="/jobs/"]', // Selector for the job link within an <h3> tag
+                jobIdExtractor: link => {
+                    const urlParts = link.href.split('/'); // Splitting the URL into parts
+                    return urlParts[urlParts.length - 1]; // Returning the last part of the path as the job ID
+                },
+                hideMethod: (element) => element.closest('.views-row').style.display = 'none' // Hide the entire views row
+            },
         "phf.tbe.taleo.net": {
             storageKey: 'daiJobIds',
             jobLinkSelector: 'div.oracletaleocwsv2-accordion-head-info a.viewJobLink', // Selector for the job link
