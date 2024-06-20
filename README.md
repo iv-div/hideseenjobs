@@ -30,7 +30,8 @@ If you want to unhide the jobs, simply refresh the page.</p>
 <a href="fticonsult.referrals.selectminds.com">FTI Consulting</a><br>
 <a href="careers.ey.com">E&Y</a></p><br>
 <p><b>Job boards</b></p>
-<a href="unjobs.org">UNJOBS</a></p><br>
+<a href="unjobs.org">UNJOBS</a><br>
+<a href="netimpact.org">NET IMPACT</a></p><br>
 
 <p><b>How  to launch</b></p>
 <p>1) Download the <a href="https://github.com/iv-div/hideseenjobs/archive/master.zip">zip file from Github</a><br>
