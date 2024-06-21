@@ -18,6 +18,12 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.style.display = 'none'
         },
+        "my.bond.org.uk": {
+            storageKey: 'bondJobIds',
+            jobLinkSelector: 'div.acjb-job-item__title', // Selector for the job title div with a data-id attribute
+            jobIdExtractor: element => element.getAttribute('data-id'), // Extracting the job ID from the data-id attribute
+            hideMethod: (element) => element.closest('.acjb-job-list__item').style.display = 'none' // Hide the entire job list item
+        },
         "tetratech.referrals.selectminds.com": {
             storageKey: 'tetraTechJobIds',
             jobLinkSelector: 'a.job_link.font_bold', // Selector for the job link
