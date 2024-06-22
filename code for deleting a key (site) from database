@@ -1,0 +1,4 @@
+//replace 'eyJobIds' with the key that you want to delete
+chrome.storage.local.remove('eyJobIds', function() {
+    console.log('eyJobIds has been removed from storage');
+});
