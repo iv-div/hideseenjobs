@@ -43,7 +43,8 @@ If you want to unhide the jobs, simply refresh the page.</p>
 5) Press the "Load Unpacked Extension"<br>
 6) Select the folder <code>hideseenjobs-main</code> with the extension<br>
 7) Alternatively, drag the folder <code>hideseenjobs-main</code> on the extension page. <br>
-8) Don't delete the folder afterwards, <br></p>
+8) Don't delete the folder afterwards, <br>
+9) You can use the "code for checking the database" and other short code snippets on the "service worker" page to maintain your database<br></p>
 <p><b>New site requests and troubleshooting</b>
 Contact me</p>
 <p><b>Are you hiring?</b>
