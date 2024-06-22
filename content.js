@@ -51,6 +51,14 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.closest('li[data-qa="searchResultItem"]').style.display = 'none' // Hide the entire list item
         },
+        "crownagents.com": {
+            storageKey: 'crownAgentsJobIds',
+            jobLinkSelector: 'a[data-lumesse-jl-jobid]', // Selector for job links with the specific data attribute
+            jobIdExtractor: link => {
+                return link.getAttribute('data-lumesse-jl-jobid'); // Extract job ID from the data attribute
+            },
+            hideMethod: (element) => element.closest('tr').style.display = 'none' // Hide the entire row
+        },
         "recruit.iom.int": {
             storageKey: 'iomJobIds',
             jobLinkSelector: 'td.urCursorClickable a.lsLink',
