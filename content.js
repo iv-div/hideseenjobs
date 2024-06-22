@@ -18,6 +18,15 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.style.display = 'none'
         },
+        "careers.rescue.org": {
+            storageKey: 'ircJobIds',
+            jobLinkSelector: 'a[data-ph-at-id="job-link"]', // Selector for job links with the specific data attribute
+            jobIdExtractor: link => {
+                const jobIdMatch = link.href.match(/\/req(\d+)/); // Look for the pattern '/req' followed by digits in the URL
+                return jobIdMatch ? `req${jobIdMatch[1]}` : null; // Return the job ID with 'req' prefix
+            },
+            hideMethod: (element) => element.closest('.jobs-list-item').style.display = 'none' // Hide the entire job list item
+        },
         "jobs.unicef.org": {
             storageKey: 'unicefJobIds',
             jobLinkSelector: '.list-view--item:not([style*="display: none"]) a.job-link', // Only select links within list items not styled as hidden
