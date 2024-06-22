@@ -18,6 +18,15 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.style.display = 'none'
         },
+        "jobs.unicef.org": {
+            storageKey: 'unicefJobIds',
+            jobLinkSelector: '.list-view--item:not([style*="display: none"]) a.job-link', // Only select links within list items not styled as hidden
+            jobIdExtractor: link => {
+                const jobId = link.href.match(/\d{6,}/); // Look for the first sequence of at least 6 digits anywhere in the URL
+                return jobId ? jobId[0] : null; // Return only the numeric part if found
+            },
+            hideMethod: (element) => element.closest('.list-view--item').style.display = 'none' // Hide the entire list view item
+        },
         "my.bond.org.uk": {
             storageKey: 'bondJobIds',
             jobLinkSelector: 'div.acjb-job-item__title', // Selector for the job title div with a data-id attribute
@@ -205,9 +214,6 @@ if (typeof siteConfigurations === 'undefined') {
     console.log("siteConfigurations already defined.");
 }
 
-
-
-
 // Listener for messages from the popup
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log(`Received message: ${request.action}`);
@@ -245,21 +251,23 @@ function saveJobs() {
 
     const { storageKey, jobLinkSelector, jobIdExtractor } = config;
     const jobLinks = Array.from(document.querySelectorAll(jobLinkSelector));
-    const newJobIds = jobLinks.map(jobIdExtractor);
-    console.log(`Found job IDs: ${newJobIds}`);
+    const newJobIds = jobLinks.map(jobIdExtractor).filter(id => id !== null); // Filter out null IDs
+    console.log(`Valid job IDs: ${newJobIds}`);
 
-    // Save new job IDs in local storage
-    chrome.storage.local.get(storageKey, function(data) {
-        let seenJobIds = data[storageKey] || [];
-        let updatedJobIds = [...new Set([...seenJobIds, ...newJobIds])];
-        let storageObject = {};
-        storageObject[storageKey] = updatedJobIds;
-        chrome.storage.local.set(storageObject, () => {
-            console.log(`Updated list of job IDs saved for ${storageKey}:`, updatedJobIds);
+    if (newJobIds.length > 0) {
+        chrome.storage.local.get(storageKey, function(data) {
+            let seenJobIds = data[storageKey] || [];
+            let updatedJobIds = [...new Set([...seenJobIds, ...newJobIds])];
+            let storageObject = {};
+            storageObject[storageKey] = updatedJobIds;
+            chrome.storage.local.set(storageObject, () => {
+                console.log(`Updated list of job IDs saved for ${storageKey}:`, updatedJobIds);
+            });
         });
-    });
+    } else {
+        console.log("No valid job IDs to save.");
+    }
 }
-
 // Function to hide seen jobs based on the current website
 function hideSeenJobs() {
     const config = getConfig();
