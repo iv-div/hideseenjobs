@@ -22,6 +22,7 @@ If you want to unhide the jobs, simply refresh the page.</p>
 <a href="weforum.wd3.myworkdayjobs.com">World Economic Forum</a><br>
 <a href="helvetas.org">Helvetas</a><br>
 <a href="careers.icrc.org">ICRC</a><br>
+<a href="https://careers.rescue.org">International Rescue Committee</a><br>
 <a href="vacancies.osce.org">OSCE</a><br>
 <a href="https://tetratech.referrals.selectminds.com/intdev/jobs/search/8390460">Tetra Tech</a></p><br>
 <p><b>Development consultancies</b></p>
