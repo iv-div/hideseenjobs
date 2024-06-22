@@ -1,0 +1,17 @@
+chrome.storage.local.get(null, function(items) {
+    Object.keys(items).forEach(key => {
+        let value = items[key];
+
+        // Check if the value is an array
+        if (Array.isArray(value)) {
+            let cleanedArray = value.filter(item => item !== null);
+
+            // Only update if there are changes
+            if (cleanedArray.length !== value.length) {
+                chrome.storage.local.set({[key]: cleanedArray}, function() {
+                    console.log(`Updated ${key} with null values removed.`);
+                });
+            }
+        }
+    });
+});
