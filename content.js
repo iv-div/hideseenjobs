@@ -12,9 +12,18 @@ if (typeof siteConfigurations === 'undefined') {
             storageKey: 'undpJobIds',
             jobLinkSelector: 'a.vacanciesTableLink',
             jobIdExtractor: link => {
-                const regex = /job\/(\d+)$/;
-                const match = link.href.match(regex);
-                return match ? match[1] : null;
+                const url = new URL(link.href);
+                const urlParams = new URLSearchParams(url.search);
+                if (urlParams.has('cur_job_id')) {
+                    return urlParams.get('cur_job_id');
+                } else {
+                    const pathSegments = url.pathname.split('/');
+                    const jobIndex = pathSegments.indexOf('job');
+                    if (jobIndex !== -1 && pathSegments.length > jobIndex + 1) {
+                        return pathSegments[jobIndex + 1];
+                    }
+                }
+                return null; // Return null if no ID is found
             },
             hideMethod: (element) => element.style.display = 'none'
         },
