@@ -27,6 +27,7 @@ If you want to unhide the jobs, simply refresh the page.</p>
 <a href="https://tetratech.referrals.selectminds.com/intdev/jobs/search/8390460">Tetra Tech</a></p><br>
 <p><b>Development consultancies</b></p>
 <a href="https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/requisitions?">ABT Global</a><br>
+<a href="https://www.bsr.org/en/careers">BSR</a><br>
 <a href="https://thepalladiumgroup.com/careers">Palladium</a></p><br>
 <p><b>Other consultancies</b></p>
 <a href="fticonsult.referrals.selectminds.com">FTI Consulting</a><br>
