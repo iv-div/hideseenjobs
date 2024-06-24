@@ -27,6 +27,16 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.style.display = 'none'
         },
+        "bsr.org": {
+            storageKey: 'bsrJobIds',
+            jobLinkSelector: 'a[href*="/bsr/jobs/"]', // Selector for job links with a specific URL pattern
+            jobIdExtractor: link => {
+                const urlParts = link.href.split('/');
+                const jobId = urlParts[urlParts.length - 1]; // Extract the last part of the URL, which contains the job ID
+                return jobId; // Return the job ID
+            },
+            hideMethod: (element) => element.closest('div.hello-again').style.display = 'none' // Hide the entire job listing container
+        },
         "careers.rescue.org": {
             storageKey: 'ircJobIds',
             jobLinkSelector: 'a[data-ph-at-id="job-link"]', // Selector for job links with the specific data attribute
