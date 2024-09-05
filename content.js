@@ -181,6 +181,22 @@ if (typeof siteConfigurations === 'undefined') {
             },
             hideMethod: (element) => element.closest('article').style.display = 'none'
         },
+        "wd3.myworkdaysite.com": {
+            storageKey: 'newwfpJobIds',
+            jobLinkSelector: 'li.css-1q2dra3',
+            jobIdExtractor: (element) => {
+                const jobIdElement = element.querySelector('li.css-h2nt8k');
+                if (jobIdElement) {
+                    const jobIdText = jobIdElement.textContent.trim();
+                    const jobIdMatch = jobIdText.match(/JR\d+/);
+                    return jobIdMatch ? jobIdMatch[0] : null;
+                }
+                return null;
+            },
+            hideMethod: (element) => element.style.display = 'none'
+        },
+
+
         "careers.icrc.org": {
             storageKey: 'icrcJobIds',
             jobLinkSelector: '.tiletitle a.jobTitle-link',
