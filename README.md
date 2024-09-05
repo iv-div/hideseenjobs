@@ -12,7 +12,7 @@ If you want to unhide the jobs, simply refresh the page.</p>
 <a href="jobs.undp.org">UNDP</a><br>
 <a href="recruit.iom.int">IOM</a><br>
 <a href="jobs.fao.org">FAO</a><br>
-<a href="wfp.org/careers/job-openings">WFP</a><br>
+<a href="https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs">WFP</a><br>
 <a href="unhcr.wd3.myworkdayjobs.com">UNHCR</a><br>
 <a href="https://jobs.unicef.org/">UNICEF</a><br>
 <a href="jobs.ilo.org">ILO</a></p><br>
